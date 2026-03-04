@@ -6,6 +6,8 @@ import { use, useEffect, useState } from 'react'
 function App() {
   const [tf, setTF] = useState(false)
 
+  const [a, setA] = useState(0)
+
   const [tf2, setTF2] = useState(false)
 
   const [color_user_1, setC1] = useState("profileG")
@@ -20,7 +22,14 @@ function App() {
 
 
   function enable_change_profile(){
-    setTF(true) 
+    if (a == 0){
+      setTF(true)
+      setA(1)
+    }
+    if (a == 1){
+      setTF(false)
+      setA(0)
+    }
   }
 
   function change_profile2(){
@@ -58,6 +67,7 @@ function App() {
       setC1("profileG")
     }
     setTF(false)
+    setA(0)
   }
 
   function change_profile3(){
@@ -95,6 +105,7 @@ function App() {
       setC1("profileG")
     }
     setTF(false)
+    setA(0)
   }
 
   function profile_click(){
