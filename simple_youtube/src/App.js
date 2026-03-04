@@ -147,6 +147,7 @@ function App() {
           <img src={logo}></img>
         </div>
         :<div></div>}
+        <div></div>
     </div>
   );
 }
